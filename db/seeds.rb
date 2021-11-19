@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do
-  Post.create(content: "asasadsddddddddddddddddddddddd
+  p=Post.create(content: "asasadsddddddddddddddddddddddd
     sasadsddddddddddddddddddddddd
     sasadsddddddddddddddddddddddd
-    sasas",title:"asasasasasas")
+    sasas",title:"asasasasasas", user_id:1)
 end
