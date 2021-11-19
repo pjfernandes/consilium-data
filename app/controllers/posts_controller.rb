@@ -15,34 +15,48 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if current_user.admin?
+      @post = Post.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.user = current_user
-    if @post.save
-      redirect_to post_path(@post), notice: 'Post was successfully created!'
-    else
-      render :new
+    if current_user.admin?
+      @post = Post.new(post_params)
+      @post.user = current_user
+      if @post.save
+        redirect_to post_path(@post), notice: 'Post was successfully created!'
+      else
+        render :new
+      end
     end
   end
 
   def edit
-    @post = Post.find(params[:id])
+    if current_user.admin?
+      @post = Post.find(params[:id])
+    else
+      redirect_to post_path
+    end
   end
 
   def update
-    @post = Post.find(params[:id])
-    @post.user = current_user
-    @post.update(post_params)
-    redirect_to post_path(@post)
+    if current_user.admin?
+      @post = Post.find(params[:id])
+      @post.user = current_user
+      @post.update(post_params)
+      redirect_to post_path(@post)
+    end
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_path
+    if current_user.admin?
+      @post = Post.find(params[:id])
+      @post.destroy
+      redirect_to posts_path
+    end
   end
 
   private
