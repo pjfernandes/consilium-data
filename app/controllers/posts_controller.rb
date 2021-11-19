@@ -15,11 +15,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    if current_user.admin?
+    #if current_user.admin?
       @post = Post.new
-    else
-      redirect_to root_path
-    end
+    #else
+     # redirect_to root_path
+    #end
   end
 
   def create
@@ -35,11 +35,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    if current_user.admin?
+    #if current_user.admin?
       @post = Post.find(params[:id])
-    else
-      redirect_to post_path
-    end
+    #else
+    #  redirect_to post_path
+    #end
   end
 
   def update
