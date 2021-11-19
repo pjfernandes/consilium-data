@@ -10,7 +10,7 @@
     <div class="card-trip-infos border-top border-dark bg-light">
       <div>
         <h2 class="text-dark"><%= post.title.capitalize %></h2> <p class="text-dark"><i class="fas fa-calendar"></i> <%=post.created_at.strftime("%m/%d/%Y")%></p>
-        <p class="text-dark"><%= post.content[(0..25)] %>...</p>
+        <p class="text-dark"><%= post.content[(0..20)] %>...</p>
       </div>
       <%=link_to "Read", post_path(post), class: "btn btn-danger"%>
       <%# <h2 class="card-trip-pricing">£99.99</h2> %>
