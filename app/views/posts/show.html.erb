@@ -1,0 +1,17 @@
+<div class="post mt-4 mr-4 ml-4 text-center bg-light text-dark border border-danger rounded">
+  <h2 class="mt-4 text-break text-center"><i class="fas fa-chart-line text-danger"></i> <%=@post.title.capitalize%></h1>
+  <p class="text-center ml-3 text-muted font-italic"><i class="fas fa-calendar"></i> <%=@post.created_at.strftime("%m/%d/%Y")%></p>
+   <% if @post.photo.attached? %>
+    <div class="figure">
+      <%= cl_image_tag @post.photo.key, class: "img-fluid pr-4 pl-4" %>
+      <p class="text-center text-break"><%=@post.legend%></p>
+    </div>
+   <%end%>
+
+  <div class="post-content mt-2 ml-4 mr-4">
+    <div class="post-content-item text-break text-justify"><%=@post.content%></div>
+  </div>
+</div>
+<div class="text-center">
+  <%= link_to "Back", :back, class:"btn btn-danger mt-4 text-center" %>
+</div>

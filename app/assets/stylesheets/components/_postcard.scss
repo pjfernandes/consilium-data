@@ -37,3 +37,10 @@
   top: -20px;
   width: 40px;
 }
+
+.post-content-item {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  margin-bottom: 1em;
+}

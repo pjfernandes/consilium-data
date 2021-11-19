@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = List.find(params[:id])
+    @post = Post.find(params[:id])
     #@bookmark = Bookmark.new
   end
 
@@ -20,13 +20,17 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.save
-    #redirect_to lists_path
+    @post.user = current_user
+    if @post.save
+      redirect_to post_path(@post), notice: 'Post was successfully created!'
+    else
+      render :new
+    end
   end
 
   private
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :legend, :user_id, :photo)
   end
 
 end

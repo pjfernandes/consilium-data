@@ -1,0 +1,12 @@
+<h2 class="text-center"><i class="fas fa-file text-danger"></i> New post</h2>
+  <div class="m-4">
+    <%= simple_form_for @post do |f| %>
+
+        <%= f.input :title, label: 'Title'%>
+        <%= f.input :content, label: 'Content'%>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :legend, label: 'Photo legend' %>
+        <%= f.button :submit, "Post", class:"btn btn-danger mb-2 pr-4 pl-4 mr-2" %>
+
+    <% end %>
+</div>
