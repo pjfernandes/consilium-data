@@ -10,5 +10,5 @@
   Post.create(content: "asasadsddddddddddddddddddddddd
     sasadsddddddddddddddddddddddd
     sasadsddddddddddddddddddddddd
-    sasas",title:"asasasasasas", user_id:1)
+    sasas",title:"asasasasasas")
 end
