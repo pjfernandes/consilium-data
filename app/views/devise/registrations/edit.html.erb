@@ -1,6 +1,4 @@
-<% if user_signed_in? && current_user.admin? %>
-
-  <h2 class="text-center"><i class="fas fa-sign-in-alt text-danger"></i> Edit user</h2>
+<h2 class="text-center"><i class="fas fa-sign-in-alt text-danger"></i> Edit user</h2>
   <div class="m-4">
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -38,6 +36,3 @@
 
   <%= link_to "Back", :back %>
   </div>
-<%else%>
-  <h1 class="text-center"><i class="fas fa-ban text-danger"></i> You are not an admin!</h1>
-<%end%>
