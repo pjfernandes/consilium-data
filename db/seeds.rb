@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do
-  p=Post.create(content: "asasadsddddddddddddddddddddddd
-    sasadsddddddddddddddddddddddd
-    sasadsddddddddddddddddddddddd
-    sasas",title:"asasasasasas", user_id:1)
-end
+# 10.times do
+#   p=Post.create(content: "asasadsddddddddddddddddddddddd
+#     sasadsddddddddddddddddddddddd
+#     sasadsddddddddddddddddddddddd
+#     sasas",title:"asasasasasas", user_id:1)
+# end
