@@ -1,11 +1,15 @@
-<h2 class="text-center"><i class="far fa-newspaper"></i> Articles</h2>
-<div class="cards">
+<h2 class="text-center"><i class="far fa-newspaper text-danger"></i> Articles</h2>
+<div class="cards pr-2 pl-2">
 <% @posts.each do |post|%>
-  <div class="card-trip m-4 border border-danger rounded">
-    <img src="https://media.istockphoto.com/photos/artificial-intelligence-and-technology-picture-id1296904409?b=1&k=20&m=1296904409&s=170667a&w=0&h=vU8YWiMsexO9WPCghhL7Sq5KTTfzv99QyqSeEZun6Kk=" />
-    <div class="card-trip-infos">
+  <div class="card-trip ml-4 mr-4 mt-4 mb-5 border border-danger rounded">
+  <% if post.photo.attached? %>
+    <%= cl_image_tag post.photo.key, heigth: 50, crop: :fill %>
+  <%else%>
+    <img src="https://media.istockphoto.com/photos/binary-code-picture-id122204403?b=1&k=20&m=122204403&s=170667a&w=0&h=tYKiboZF8lNrgAk3tD11J_5y63qcopVQ3Sw6jwcdlgs=" />
+  <%end%>
+    <div class="card-trip-infos border-top border-danger bg-light">
       <div>
-        <h2 class="text-dark"><%= post.title.capitalize %></h2> <p class="text-dark"><%=post.created_at.strftime("%m/%d/%Y")%></p>
+        <h2 class="text-dark"><%= post.title.capitalize %></h2> <p class="text-dark"><i class="fas fa-calendar"></i> <%=post.created_at.strftime("%m/%d/%Y")%></p>
         <p class="text-dark"><%= post.content[(0..25)] %>...</p>
       </div>
       <%=link_to "Read", post_path(post), class: "btn btn-danger"%>

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show new create]
+  skip_before_action :authenticate_user!, only: %i[index show]
 
    def index
     #if params[:query_ship]
@@ -26,6 +26,23 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.user = current_user
+    @post.update(post_params)
+    redirect_to post_path(@post)
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
   end
 
   private

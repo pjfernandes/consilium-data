@@ -1,4 +1,4 @@
-<h2 class="text-center"><i class="fas fa-file text-danger"></i> New post</h2>
+<h2 class="text-center"><i class="fas fa-file text-danger"></i> Edit post</h2>
   <div class="m-4">
     <%= simple_form_for @post do |f| %>
 
@@ -6,7 +6,7 @@
         <%= f.input :content, label: 'Content', as: :text%>
         <%= f.input :photo, as: :file %>
         <%= f.input :legend, label: 'Photo legend' %>
-        <%= f.button :submit, "Post", class:"btn btn-danger mb-2 pr-4 pl-4 mr-2" %>
-
+        <%= f.button :submit, "Save", class:"btn btn-danger mb-2 pr-4 pl-4 mt-2 mr-2" %>
+        <%= link_to "Back", :back, class:"btn btn-danger text-center ml-2" %>
     <% end %>
 </div>
