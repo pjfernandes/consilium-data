@@ -3,13 +3,13 @@
   <div class="logo d-flex justify-content-between">
     <div class="xepa text-left d-flex align-items-center">
 
-     <h1 class="app-name"><i class="fas fa-chart-pie"></i> </h1>
-     <h2 class="consilium">&nbspConsilium Data</h2>
+     <h1 class="app-name mt-2"><i class="fas fa-chart-pie"></i> </h1>
+     <h4 class="consilium mt-2">&nbspConsilium Data</strong></h4>
 
     </div>
   </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler bg-danger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -18,7 +18,7 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item active d-flex justify-content-center">
-         <strong><%= link_to "Home", root_path, class: "nav-link text-danger" %></strong>
+         <strong><%= link_to "Home", root_path, class: "nav-link text-danger mr-2" %></strong>
          <strong><%= link_to "Articles", root_path, class: "nav-link text-danger" %></strong>
       </li>
       <% if user_signed_in? %>
