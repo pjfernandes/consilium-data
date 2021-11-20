@@ -7,6 +7,11 @@ class PostsController < ApplicationController
     else
       @posts = Post.all
     end
+
+    # respond_to do |format|
+    #   format.html # Follow regular flow of Rails
+    #   format.text { render partial: 'posts/list', locals: { posts: @posts }, formats: [:html] }
+    # end
   end
 
   def show
