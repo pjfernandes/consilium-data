@@ -3,9 +3,9 @@ class PostsController < ApplicationController
 
   def index
     if params[:query].present?
-      @posts = Post.search_by_title_and_content(params[:query])
+      @posts = Post.search_by_title_and_content(params[:query]).sort.reverse
     else
-      @posts = Post.all
+      @posts = Post.all.sort.reverse
     end
 
     # respond_to do |format|
