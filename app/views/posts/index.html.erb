@@ -4,7 +4,7 @@
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: "Find a post"
+      placeholder: "Find a post by title or content"
     %>
     <%= submit_tag "Search", class: "btn btn-danger text-center mt-2" %>
     <%= link_to "Delete search", request.path, class:"btn btn-danger mt-3 mb-2 ml-2" %>
