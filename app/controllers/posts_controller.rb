@@ -1,17 +1,16 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
-   def index
-    #if params[:query_ship]
-     # @posts = Occurrence.search_by_ship(params[:query_ship])
-    #else
+  def index
+    if params[:query].present?
+      @posts = Post.search_by_title_and_content(params[:query])
+    else
       @posts = Post.all
-    #end
+    end
   end
 
   def show
     @post = Post.find(params[:id])
-    #@bookmark = Bookmark.new
   end
 
   def new
