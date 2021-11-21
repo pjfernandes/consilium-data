@@ -1,12 +1,19 @@
+
 <h2 class="text-center"><i class="fas fa-file text-danger"></i> New post</h2>
-  <div class="m-4">
-    <%= simple_form_for @post do |f| %>
+<div class="m-4">
+  <%= simple_form_for @post do |f| %>
+    <%= f.input :title, label: 'Title'%>
+     <%= f.label :content %>
+    <div class="bg-white rounded mb-3">
+      <div class="p-2 mb-2">
+        <%= f.rich_text_area :content, label: 'Content', class: "bg-white text-dark"%>
+      </div>
+    </div>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :legend, label: 'Photo legend' %>
+    <%= f.button :submit, "Post", class:"btn btn-danger mb-2 pr-4 pl-4 mr-2" %>
+    <%=link_to "Back", posts_path, class:"btn btn-danger mb-2 pr-4 pl-4 mr-2"%>
 
-        <%= f.input :title, label: 'Title'%>
-        <%= f.input :content, label: 'Content', as: :text%>
-        <%= f.input :photo, as: :file %>
-        <%= f.input :legend, label: 'Photo legend' %>
-        <%= f.button :submit, "Post", class:"btn btn-danger mb-2 pr-4 pl-4 mr-2" %>
+  <% end %>
 
-    <% end %>
 </div>

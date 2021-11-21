@@ -25,7 +25,11 @@ require("channels")
 // External imports
 import "bootstrap";
 import { loadDynamicBannerText } from '../components/text_animation';
+import "trix"
+import "@rails/actiontext"
 
+require("trix");
+require("@rails/actiontext");
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
