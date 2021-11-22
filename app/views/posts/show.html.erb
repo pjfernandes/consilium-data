@@ -3,13 +3,13 @@
   <p class="text-center ml-3 text-muted font-italic text-break"><i class="fas fa-calendar"></i> <%=@post.created_at.strftime("%m/%d/%Y")%></p>
    <% if @post.photo.attached? %>
     <div class="figure">
-      <%= cl_image_tag @post.photo.key, class: "img-fluid pr-4 pl-4" %>
+      <%= cl_image_tag @post.photo.key, class: "img-fluid pr-4 pl-4 rounded mx-auto d-block" %>
       <p class="text-center text-break"><%=@post.legend%></p>
     </div>
    <%end%>
 
   <div class="post-content mt-2 ml-4 mr-4">
-    <div class="post-content-item text-break text-left"><%=@post.content%></div>
+    <div class="post-content-item text-break text-left rounded mx-auto d-block"><%=@post.content%></div>
   </div>
 </div>
 <div class="text-center">
