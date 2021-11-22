@@ -1,6 +1,6 @@
 <div class="post mt-5 mr-4 ml-4 mb-4 text-center bg-light text-dark border border-danger rounded">
   <h4 class="mt-4 text-break text-center p-2"><i class="fas fa-chart-line text-danger"></i> <%=@post.title.capitalize%></h4>
-  <p class="text-center ml-3 text-muted font-italic"><i class="fas fa-calendar"></i> <%=@post.created_at.strftime("%m/%d/%Y")%></p>
+  <p class="text-center ml-3 text-muted font-italic text-break"><i class="fas fa-calendar"></i> <%=@post.created_at.strftime("%m/%d/%Y")%></p>
    <% if @post.photo.attached? %>
     <div class="figure">
       <%= cl_image_tag @post.photo.key, class: "img-fluid pr-4 pl-4" %>
