@@ -27,6 +27,7 @@ import "bootstrap";
 import { loadDynamicBannerText } from '../components/text_animation';
 import "trix"
 import "@rails/actiontext"
+import "../trix-editor-overrides"
 
 require("trix");
 require("@rails/actiontext");
