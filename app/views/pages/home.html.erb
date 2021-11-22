@@ -32,11 +32,12 @@
 
     function togglePlay() {
       if (isPlaying) {
-        audioButton.className =  "audio fas fa-pause";
+        audioButton.className =  "audio fas fa-play";
         myAudio.pause()
       } else {
         myAudio.play();
-        audioButton.className =  "audio fas fa-play";
+        audioButton.className =  "audio fas fa-pause";
+
       }
     };
 
