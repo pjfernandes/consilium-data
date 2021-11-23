@@ -3,7 +3,7 @@
   <p class="text-center ml-3 text-muted font-italic text-break"><i class="fas fa-calendar"></i> <%=@post.created_at.strftime("%m/%d/%Y")%></p>
    <% if @post.photo.attached? %>
     <div class="figure">
-      <%= cl_image_tag @post.photo.key, class: "img-fluid mx-auto d-block rounded w-50" %>
+      <%= cl_image_tag @post.photo.key, class: "figure-attach img-fluid mx-auto d-block rounded w-50" %>
       <p class="text-center text-break"><%=@post.legend%></p>
     </div>
    <%end%>
