@@ -17,36 +17,36 @@
     the exercise of power to resolve conflicts of interest.</p>
     <p>Our main objective is to fight the asymmetry that exists between those who dominate <strong class="text-danger">Data Science</strong> and those who are dominated by it.</p>
 
-  <button onclick="togglePlay()" class="btn btn-danger text bg-black" type="button"><i class="audio fas fa-play"></i></button>
+    <button onclick="togglePlay()" class="btn btn-danger text bg-black" type="button"><i class="audio fas fa-play"></i></button>
 
-  <%= audio_tag "sample.mp3", id: "audio" %>
+    <%= audio_tag "sample.mp3", id: "audio" %>
 
-  <script>
-    var audioButton = document.getElementsByClassName('audio')[0];
-    var myAudio = document.getElementById("audio");
-    var isPlaying = false;
+    <script>
+      var audioButton = document.getElementsByClassName('audio')[0];
+      var myAudio = document.getElementById("audio");
+      var isPlaying = false;
 
 
-    function togglePlay() {
-      if (isPlaying) {
-        audioButton.className =  "audio fas fa-play";
-        myAudio.pause()
-      } else {
-        myAudio.play();
-        audioButton.className =  "audio fas fa-pause";
+      function togglePlay() {
+        if (isPlaying) {
+          audioButton.className =  "audio fas fa-play";
+          myAudio.pause()
+        } else {
+          myAudio.play();
+          audioButton.className =  "audio fas fa-pause";
 
-      }
-    };
+        }
+      };
 
-    myAudio.onplaying = function() {
-      isPlaying = true;
-    };
+      myAudio.onplaying = function() {
+        isPlaying = true;
+      };
 
-    myAudio.onpause = function() {
-      isPlaying = false;
-    };
+      myAudio.onpause = function() {
+        isPlaying = false;
+      };
 
-  </script>
+    </script>
   </div>
 
    <div class="banner mt-5" style="background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(https://media.istockphoto.com/photos/cyberspace-with-digital-lines-binary-hanging-chain-picture-id583960308?b=1&k=20&m=583960308&s=170667a&w=0&h=RezvK4R2kechrJrk5XfXndDXUVmqmhlDB87P04aqS_U=);">
