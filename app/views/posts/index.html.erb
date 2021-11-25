@@ -1,4 +1,9 @@
-<title>Consilium Data - Articles</title>
+<% content_for :meta do %>
+  <meta name="description" content="Discovering patterns, revealing trends">
+<% end %>
+
+<% content_for :title, "Consilium Data - Articles" %>
+
 <h2 class="text-center"><i class="far fa-newspaper text-danger"></i> Articles</h2>
 <div class="form text-center mr-4 ml-4 mt-3">
   <%= form_tag posts_path, method: :get do %>
