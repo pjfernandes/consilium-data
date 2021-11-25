@@ -1,5 +1,5 @@
 <div class="post mt-5 mr-4 ml-4 mb-4 text-center bg-light text-dark border border-danger rounded">
-  <h2 class="post-title mt-4 text-break text-center p-2 mr-2 ml-2"><i class="fas fa-chart-line text-danger"></i> <%=@post.title.capitalize%></h2>
+  <h2 class="post-title mt-4 text-break text-center p-2 mr-2 ml-2"><i class="fas fa-chart-line text-danger"></i> <%=@post.title%></h2>
   <p class="text-center ml-3 text-muted font-italic text-break"><i class="fas fa-calendar"></i> <%=@post.created_at.strftime("%m/%d/%Y")%></p>
 
    <% if @post.photo.attached? %>
