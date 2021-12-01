@@ -145,6 +145,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    mail_form (1.9.0)
+      actionmailer (>= 5.2)
+      activemodel (>= 5.2)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -319,6 +322,7 @@ DEPENDENCIES
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  mail_form
   pg (>= 0.18, < 2.0)
   pg_search (~> 2.3.0)
   pry-byebug
@@ -342,4 +346,4 @@ RUBY VERSION
    ruby 2.7.3p183
 
 BUNDLED WITH
-   2.2.27
+   2.2.32

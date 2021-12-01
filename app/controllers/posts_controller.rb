@@ -31,6 +31,7 @@ class PostsController < ApplicationController
       @post = Post.new(post_params)
       @post.user = current_user
       if @post.save
+        send_confirmation
         redirect_to post_path(@post), notice: 'Post was successfully created!'
       else
         render :new
@@ -66,6 +67,10 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title, :content, :legend, :user_id, :photo)
+  end
+
+  def send_confirmation
+    UserMailer.with(user: self).confirmation.deliver_now!
   end
 
 end
