@@ -120,7 +120,8 @@ Rails.application.configure do
   :address => 'smtp.sendgrid.net',
   :port => 587,
   :authentication => :plain,
-  :enable_starttls_auto => true
+  :enable_starttls_auto => true,
+  user_name: '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'
   }
 
 end
