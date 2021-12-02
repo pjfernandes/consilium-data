@@ -7,7 +7,7 @@ class CreateContacts < ActiveRecord::Migration[6.0]
       #t.string :ip
       #t.float :latitude
       #t.float :longitude
-      #t.string :nickname
+      t.string :nickname
 
       t.timestamps
     end
