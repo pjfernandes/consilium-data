@@ -6,7 +6,7 @@
 
 
 <div class="post mt-5 mr-4 ml-4 mb-4 text-center bg-light text-dark border border-danger rounded">
-  <h2 class="post-title mt-4 text-break text-center mr-2 ml-2"><button onclick="togglePlay()" class="post-title btn btn-light btn-sm text-danger mr-2" type="button"><i class="audio fas fa-play"></i></button><%=@post.title%></h2>
+  <h4 class="post-title mt-4 text-break text-center mr-2 ml-2"><button onclick="togglePlay()" class="post-title btn btn-light btn-sm text-danger mr-2" type="button"><i class="audio fas fa-play"></i></button><%=@post.title%></h4>
   <p class="text-center ml-3 text-muted font-italic text-break"><i class="fas fa-calendar"></i> <%=@post.created_at.strftime("%m/%d/%Y")%></p>
 
    <% if @post.photo.attached? %>
