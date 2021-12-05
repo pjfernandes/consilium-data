@@ -116,8 +116,8 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   ActionMailer::Base.smtp_settings = {
-  :user_name => "app238436109@heroku.com",
-  :password => "knoxdqmz2467",
+  :user_name => "apikey",
+  :password => "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",
   :domain => 'heroku.com',
   :address => 'smtp.sendgrid.net',
   :port => 587,
