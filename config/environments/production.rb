@@ -120,7 +120,7 @@ Rails.application.configure do
   :password => "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",
   :domain => 'heroku.com',
   :address => 'smtp.sendgrid.net',
-  :port => 587,
+  :port => 2525,
   :authentication => :plain,
   :enable_starttls_auto => true
   }
