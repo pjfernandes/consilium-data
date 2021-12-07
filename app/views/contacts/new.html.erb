@@ -7,7 +7,9 @@
         <%= f.input :email, :required => true %>
         <%= f.input :message, :as => :text, :required => true %>
         <div class= "hidden">
-          <%= f.text_field :nickname, :hint => 'Leave this field blank!', type: "hidden"%>
+          <%= f.text_field :ip, type: "hidden"%>
+          <%= f.input :latitude, type: "hidden"%>
+          <%= f.input :longitude, type: "hidden"%>
         </div>
         <div>
           <%= f.button :submit, 'Send', :class=> "btn btn-danger mt-2" %>

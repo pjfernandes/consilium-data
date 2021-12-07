@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
 
-   def create
+  def create
     @contact = Contact.new(contact_params)
     if @contact.save
       redirect_to contacts_path, notice: 'Your message was sent.'
@@ -14,11 +14,9 @@ class ContactsController < ApplicationController
     end
   end
 
-end
-
-
- def contact_params
-    params.require(:occurrence).permit(
-      :name, :email, :message, :ip, :latitude, :longitude
-    )
+  private
+  def contact_params
+    params.require(:occurrence).permit(:name, :email, :message, :ip, :latitude, :longitude)
   end
+
+end
