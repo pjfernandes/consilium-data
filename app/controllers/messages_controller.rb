@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :new, :create ]
 
-   def index
+  def index
     if current_user.admin?
       @messages = Message.all
     else
