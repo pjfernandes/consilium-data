@@ -28,6 +28,7 @@ import { loadDynamicBannerText } from '../components/text_animation';
 import "trix"
 import "@rails/actiontext"
 import "../trix-editor-overrides"
+import { createCoords } from '../components/coordinates';
 
 require("trix");
 require("@rails/actiontext");
@@ -38,4 +39,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   loadDynamicBannerText();
+  createCoords();
 });

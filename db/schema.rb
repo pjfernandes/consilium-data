@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2021_12_07_223331) do
   create_table "contacts", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "message"
     t.string "ip"
     t.float "latitude"
     t.float "longitude"

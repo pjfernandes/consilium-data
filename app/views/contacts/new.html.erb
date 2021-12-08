@@ -1,16 +1,14 @@
 <div class="text-center pr-4 pl-4">
   <h2 class="container pb-3"><i class="fas fa-envelope-open text-danger"></i> Contact</h2>
     <div class="border border-danger rounded pt-2 pb-2">
-    <div class="pr-3 pl-3 pt-2 pb-3">
+    <div id="new-form" class="pr-3 pl-3 pt-2 pb-3">
       <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
         <%= f.input :name, :required => true %>
         <%= f.input :email, :required => true %>
-        <%= f.input :message, :as => :text, :required => true %>
-        <div class= "hidden">
-          <%= f.text_field :ip, type: "hidden"%>
-          <%= f.input :latitude, type: "hidden"%>
-          <%= f.input :longitude, type: "hidden"%>
-        </div>
+        <%= f.input :message, :as => :text, :required => true , hint: 'Minimum 10 characters.'%>
+        <%= f.text_field :ip, type: "hidden"%>
+        <%# <%= f.text_field :latitude, type: "hidden"%>
+        <%# <%= f.text_field :longitude, type: "hidden"%>
         <div>
           <%= f.button :submit, 'Send', :class=> "btn btn-danger mt-2" %>
         </div>

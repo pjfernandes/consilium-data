@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
 
   private
   def contact_params
-    params.require(:occurrence).permit(:name, :email, :message, :ip, :latitude, :longitude)
+    params.require(:contact).permit(:name, :email, :message, :ip, :latitude, :longitude)
   end
 
 end
