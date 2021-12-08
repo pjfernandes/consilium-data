@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
-  #get 'contact/new'
+  get 'contact/new'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # For details on the DSL available withinthis file, see https://guides.rubyonrails.org/routing.html
 
   resources :posts do
     resources :comments
   end
 
-  resources :contacts, only: %i[index show new create]
+  match '/contacts', to: 'contacts#new', via: 'get'
+  resources :contacts, only: [:new, :create]
+  resources :messages, only: [:new, :create, :index, :show]
 end
