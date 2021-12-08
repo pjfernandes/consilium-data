@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'contact/new'
+  #get 'contact/new'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: 'pages#home'
@@ -9,6 +9,5 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  match '/contacts', to: 'contacts#new', via: 'get'
-  resources :contacts, only: [:new, :create]
+  resources :contacts, only: %i[index show new create]
 end

@@ -7,8 +7,6 @@
         <%= f.input :email, :required => true %>
         <%= f.input :message, :as => :text, :required => true , hint: 'Minimum 10 characters.'%>
         <%= f.text_field :ip, type: "hidden"%>
-        <%# <%= f.text_field :latitude, type: "hidden"%>
-        <%# <%= f.text_field :longitude, type: "hidden"%>
         <div>
           <%= f.button :submit, 'Send', :class=> "btn btn-danger mt-2" %>
         </div>
