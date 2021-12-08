@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:name, :email, :message, :ip, :latitude, :longitude)
+    params.require(:message).permit(:id, :name, :email, :message, :ip, :latitude, :longitude)
   end
 
 end
