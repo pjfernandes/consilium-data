@@ -56,15 +56,6 @@ ActiveRecord::Schema.define(version: 2021_12_08_140918) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "contacts", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "message"
-    t.string "nickname"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "messages", force: :cascade do |t|
     t.string "name"
     t.string "email"
