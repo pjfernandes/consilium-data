@@ -20,7 +20,7 @@
       <li class="nav-item active d-flex justify-content-center">
          <strong><%= link_to "Home", root_path, class: "nav-link text-danger mr-2" %></strong>
          <strong><%= link_to "Articles", posts_path, class: "nav-link text-danger mr-2" %></strong>
-         <strong><%= link_to "Contact", new_contact_path, class: "nav-link text-danger" %></strong>
+         <strong><%= link_to "Contact", new_message_path, class: "nav-link text-danger" %></strong>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item dropdown text-center">
@@ -29,7 +29,7 @@
             <%= link_to "My profile", edit_user_registration_path, class: "dropdown-item" %>
             <%if current_user.admin?%>
               <%= link_to "New post", new_post_path, class: "dropdown-item" %>
-              <%= link_to "Messages", contacts_path, class: "dropdown-item" %>
+              <%= link_to "Messages", messages_path, class: "dropdown-item" %>
             <%end%>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: " dropdown-item" %>
           </div>

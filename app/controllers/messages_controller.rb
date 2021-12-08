@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
    def index
     if current_user.admin?
-      @contacts = Contact.all
+      @messages = Message.all
     else
       redirect_to root_path
     end
@@ -11,20 +11,20 @@ class MessagesController < ApplicationController
 
   def show
     if current_user.admin?
-      @contact = Contact.find(params[:id])
+      @message = Message.find(params[:id])
     else
       redirect_to root_path
     end
   end
 
   def new
-    @contact = Contact.new
+    @message = Message.new
   end
 
   def create
-    @contact = Contact.new(contact_params)
-    if @contact.save
-      redirect_to contacts_path, notice: 'Your message was sent.'
+    @message = Message.new(message_params)
+    if @message.save
+      redirect_to messages_path, notice: 'Your message was sent.'
     else
       render :new
     end
@@ -33,8 +33,8 @@ class MessagesController < ApplicationController
 
 
   private
-  def contact_params
-    params.require(:contact).permit(:id, :name, :email, :message, :ip, :latitude, :longitude)
+  def message_params
+    params.require(:message).permit(:name, :email, :message, :ip, :latitude, :longitude)
   end
 
 end
