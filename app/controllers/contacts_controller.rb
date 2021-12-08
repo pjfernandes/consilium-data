@@ -24,7 +24,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      redirect_to contacts_path, notice: 'Your message was sent.'
+      redirect_to root_path, notice: 'Your message was sent.'
     else
       render :new
     end
