@@ -29,7 +29,7 @@
   <%end%>
     <div class="card-trip-infos bg-light">
       <div class="text-dark text-break ">
-        <h2 class="text-dark mb-2"><%= post.title %></h2> <p class="text-dark"><i class="fas fa-calendar text-danger"></i> <%=post.created_at.strftime("%m/%d/%Y")%></p>
+        <h2 class="post-title text-dark mb-2"><%= post.title %></h2> <p class="text-dark"><i class="fas fa-calendar text-danger"></i> <%=post.created_at.strftime("%m/%d/%Y")%></p>
         <%# <div><p class="text-dark"><%= post.content%>
       </div>
       <%=link_to "Read", post_path(post), class: "btn btn-danger"%>
