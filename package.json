@@ -1,6 +1,9 @@
 {
   "name": "consilium_data",
   "private": true,
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/actiontext": "^6.0.4-1",
