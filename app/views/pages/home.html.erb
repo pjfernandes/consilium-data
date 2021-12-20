@@ -18,10 +18,11 @@
 
 
   <div class="first-banner mt-2 mb-4">
-    <p>Coming from Latin, the expression <strong class="text-danger">Consilium Data</strong> can be understood as <strong class="text-danger">the Data Policy</strong>.
-    Such name does not occur by chance, since the Policy is the exercise of power to resolve conflicts of interest.</p>
-    <p>Our main objective is to fight the asymmetry that exists between those who dominate <strong class="text-danger">Data Science</strong> and those who are dominated by it.</p>
-
+    <div class="mr-1 ml-1">
+      <p>Coming from Latin, the expression <strong class="text-danger">Consilium Data</strong> can be understood as <strong class="text-danger">the Data Policy</strong>.
+      Such name does not occur by chance, since the Policy is the exercise of power to resolve conflicts of interest.</p>
+      <p>Our main objective is to fight the asymmetry that exists between those who dominate <strong class="text-danger">Data Science</strong> and those who are dominated by it.</p>
+    </div>
     <button onclick="togglePlay()" class="btn btn-danger text bg-black" type="button"><i class="audio fas fa-play"></i></button>
 
     <%= audio_tag "sample.mp3", id: "audio" %>
