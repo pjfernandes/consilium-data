@@ -1,5 +1,5 @@
 {
-  "name": "consilium_data",
+  "name": "consiliumdata",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
