@@ -1,9 +1,7 @@
 {
   "name": "consilium_data",
-  "engines": {
-    "node": "14.x",
-    "yarn": "1.x",
-    "npm": "6.x"
+   "engines": {
+    "node": "14.x"
   },
   "private": true,
   "dependencies": {
