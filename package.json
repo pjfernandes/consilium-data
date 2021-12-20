@@ -2,7 +2,7 @@
   "name": "consilium_data",
   "private": true,
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
