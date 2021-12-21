@@ -1,6 +1,10 @@
 {
-  "name": "consiliu_mdata",
+  "name": "consiliumdata",
   "private": true,
+  "engines": {
+    "node": "16.13.1",
+    "yarn": "1.22.17"
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/actiontext": "^6.0.4-1",
@@ -18,9 +22,5 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^4.5.0"
-  },
-  "engines": {
-    "node": "16.13.1",
-    "yarn": "1.22.17"
   }
 }
