@@ -2,7 +2,7 @@
   "name": "consilium_data",
   "private": true,
   "engines": {
-    "node": "16.13.1",
+    "node": "14.15.5",
     "yarn": "1.22.17"
   },
   "dependencies": {
