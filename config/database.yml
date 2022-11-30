@@ -78,8 +78,13 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: consilium_data_production
+#   username: consilium_data
+#   password: <%= ENV['CONSILIUM_DATA_DATABASE_PASSWORD'] %>
 production:
   <<: *default
-  database: consilium_data_production
-  username: consilium_data
-  password: <%= ENV['CONSILIUM_DATA_DATABASE_PASSWORD'] %>
+  database: consiliumdata_production
+  username: consiliumdata
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
