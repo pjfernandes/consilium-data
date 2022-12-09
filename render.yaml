@@ -1,12 +1,10 @@
 databases:
   - name: consiliumdata
-    plan: free
     databaseName: consiliumdata
     user: consiliumdata
 
 services:
   - type: web
-    plan: free
     name: consiliumdata
     env: ruby
     buildCommand: "./bin/render-build.sh"
